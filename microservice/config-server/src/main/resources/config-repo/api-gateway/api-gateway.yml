@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+      routes:
+        - id: complain-service
+          uri: lb://COMPLAIN-SERVICE
+          predicates:
+            - Path=/complain/**
+          filters:
+            - StripPrefix=1

@@ -34,8 +34,9 @@ dependencies {
 
     // Unique to this service:
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
     implementation 'com.commonlib:common-lib:0.0.1-SNAPSHOT'
-
+    implementation 'com.mysql:mysql-connector-j'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
