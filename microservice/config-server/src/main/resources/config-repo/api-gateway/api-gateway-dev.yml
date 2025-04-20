@@ -1,6 +1,35 @@
 server:
   port: 8080
 
+spring:
+  application:
+    name: API-GATEWAY
+
+  main:
+    web-application-type: reactive
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          lower-case-service-id: true
+
+      routes:
+        - id: complain-service
+          uri: lb://COMPLAIN-SERVICE
+          predicates:
+            - Path=/complain-service/**
+          filters:
+            - AuthenticationFilter
+
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth-service/**
+          filters:
+            - AuthenticationFilter
+
 eureka:
   client:
     register-with-eureka: true

@@ -6,14 +6,15 @@ spring:
     name: config-server
 
   profiles:
-    active: native              # switch to filesystem-based (native) mode
+    active: native  # switch to filesystem-based (native) mode
 
   cloud:
     config:
       server:
         native:
-          search-locations:     # point at our bundled config-repo directory
-            classpath:/config-repo/shared,
-            classpath:/config-repo/complain-service,
-            classpath:/config-repo/api-gateway,
-            classpath:/config-repo/eureka-server
+          search-locations:  # point at our bundled config-repo directory
+            - classpath:/config-repo/shared
+            - classpath:/config-repo/complain-service
+            - classpath:/config-repo/api-gateway
+            - classpath:/config-repo/eureka-server
+            - classpath:/config-repo/auth-service

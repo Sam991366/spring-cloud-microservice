@@ -1,5 +1,7 @@
 package com.commonlib.request;
 
+import java.net.Authenticator.RequestorType;
+
 public class ComplainDto {
 
 	private String complainId;
