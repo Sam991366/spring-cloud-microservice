@@ -1,4 +1,4 @@
-package com.apigateway.security;
+package com.commonlib.security;
 
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;

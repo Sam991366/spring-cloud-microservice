@@ -1,4 +1,4 @@
-package com.apigateway.security;
+package com.commonlib.security;
 
 import javax.crypto.SecretKey;
 
